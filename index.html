@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rehan Photography</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Rehan Photography</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <h2>Capturing Life’s Beautiful Moments</h2>
+    <p>Through My Lens, The World Comes Alive</p>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I'm <strong>Rehan</strong>, a passionate photographer dedicated to turning fleeting moments 
+      into timeless memories. I specialize in nature, street, and portrait photography — capturing the 
+      emotions behind every scene. My mission is simple: <em>make every shot feel alive.</em>
+    </p>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery">
+    <h2>My Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=800&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1759339433160-7a5828396250?auto=format&fit=crop&q=80&w=1170" alt="">
+      <img src="https://plus.unsplash.com/premium_photo-1712685912275-943ff90aac7c?auto=format&fit=crop&q=80&w=1167" alt="">
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <div class="contact">
+      <input type="text" placeholder="Your Name"><br>
+      <textarea rows="4" placeholder="Your Message"></textarea><br>
+      <button onclick="sendMessage()">Send Message</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Rehan Photography — Crafted with ❤️ by Rehan
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <img src="" alt="">
+  </div>
+
+  <script>
+    const imgs = document.querySelectorAll('.gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+
+    imgs.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    function sendMessage() {
+      alert("Thank you for reaching out! I'll get back to you soon.");
+    }
+  </script>
+
+</body>
+
+</html>
